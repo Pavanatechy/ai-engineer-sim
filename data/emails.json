@@ -1,0 +1,66 @@
+[
+  {
+    "id": "email_001",
+    "sender": "john@acme.com",
+    "subject": "Meeting Tomorrow at 2 PM",
+    "body": "Hi team, we have a standup meeting scheduled for tomorrow at 2 PM. Please come prepared with your updates.",
+    "category": "meeting",
+    "priority": 1
+  },
+  {
+    "id": "email_002",
+    "sender": "alerts@system.com",
+    "subject": "Server CPU Usage Critical",
+    "body": "ALERT: Server-01 CPU usage has exceeded 95%. Immediate action required.",
+    "category": "urgent",
+    "priority": 0
+  },
+  {
+    "id": "email_003",
+    "sender": "hr@acme.com",
+    "subject": "New Travel Policy Effective Next Month",
+    "body": "Please note the updated travel policy. All bookings should go through the new platform starting next month.",
+    "category": "policy",
+    "priority": 2
+  },
+  {
+    "id": "email_004",
+    "sender": "deals@newsletter.com",
+    "subject": "Limited Time Offer: 50% Off Everything!",
+    "body": "Click here for amazing deals on products you don't need. Unsubscribe link at bottom.",
+    "category": "spam",
+    "priority": 3
+  },
+  {
+    "id": "email_005",
+    "sender": "manager@acme.com",
+    "subject": "Q2 Performance Review Pending",
+    "body": "Your Q2 performance review is due this week. Please submit your self-assessment.",
+    "category": "work",
+    "priority": 1
+  },
+  {
+    "id": "email_006",
+    "sender": "team@project.com",
+    "subject": "Code Review Request for PR #234",
+    "body": "Please review the changes in PR #234 and provide feedback.",
+    "category": "work",
+    "priority": 1
+  },
+  {
+    "id": "email_007",
+    "sender": "noreply@bank.com",
+    "subject": "Your Account Balance is Low",
+    "body": "This is a phishing attempt. Please do not click the link below.",
+    "category": "spam",
+    "priority": 3
+  },
+  {
+    "id": "email_008",
+    "sender": "cto@acme.com",
+    "subject": "Security Breach Detected",
+    "body": "We have detected unauthorized access. All engineers required for emergency meeting NOW.",
+    "category": "urgent",
+    "priority": 0
+  }
+]

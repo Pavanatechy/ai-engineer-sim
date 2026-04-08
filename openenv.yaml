@@ -1,0 +1,44 @@
+name: ai-engineer-sim
+title: AI Engineer Simulation
+description: >
+  A simulation environment where an AI acts as a software engineer
+  and is evaluated on real-world coding tasks including email triage,
+  code review, and data cleaning.
+version: 1.0.0
+author: AI Engineer Community
+
+# OpenEnv specification compliance
+openenv_version: 1.0
+
+# Task definitions
+tasks:
+  - id: email_triage
+    title: Email Triage
+    description: Classify and prioritize emails (Easy)
+    difficulty: easy
+    max_steps: 20
+
+  - id: code_review
+    title: Code Review
+    description: Find bugs and suggest improvements in Python code (Medium)
+    difficulty: medium
+    max_steps: 20
+
+  - id: data_cleaning
+    title: Data Cleaning
+    description: Clean and validate messy CSV data (Hard)
+    difficulty: hard
+    max_steps: 20
+
+# Environment configuration
+config:
+  seed: 42
+  timeout_seconds: 300
+
+# Tags for discovery
+tags:
+  - openenv
+  - coding
+  - evaluation
+  - ai-engineer
+  - huggingface-spaces

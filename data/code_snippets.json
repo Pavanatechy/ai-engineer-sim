@@ -1,0 +1,49 @@
+[
+  {
+    "id": "code_001",
+    "snippet": "def calculate_average(numbers):\n    total = sum(numbers)\n    return total / len(numbers)",
+    "bugs": ["division by zero when numbers is empty"],
+    "expected_fix": "Add check for empty list: if not numbers: return 0",
+    "difficulty": 1
+  },
+  {
+    "id": "code_002",
+    "snippet": "def find_user(user_id, users):\n    for user in users:\n        if user['id'] == user_id:\n            return user\n    return None",
+    "bugs": ["inefficient O(n) lookup"],
+    "expected_fix": "Use dictionary or hash map for O(1) lookup",
+    "difficulty": 2
+  },
+  {
+    "id": "code_003",
+    "snippet": "def process_data(data):\n    result = []\n    for item in data:\n        if item > 10:\n            result.append(item * 2)\n    for item in result:\n        print(item)\n    return result",
+    "bugs": [
+      "uses print statements instead of logging",
+      "unclear variable naming",
+      "can be simplified with list comprehension"
+    ],
+    "expected_fix": "Refactor: use logging, better names, list comprehension",
+    "difficulty": 2
+  },
+  {
+    "id": "code_004",
+    "snippet": "def parse_csv(filename):\n    with open(filename) as f:\n        return [line.strip().split(',') for line in f]",
+    "bugs": [
+      "no error handling",
+      "doesn't close file properly",
+      "no encoding specification"
+    ],
+    "expected_fix": "Add try-except, use context manager properly, specify utf-8",
+    "difficulty": 2
+  },
+  {
+    "id": "code_005",
+    "snippet": "class DatabaseConnection:\n    def __init__(self):\n        self.conn = create_connection()\n    def query(self, sql):\n        return self.conn.execute(sql).fetchall()\n    def close(self):\n        self.conn.close()",
+    "bugs": [
+      "no connection pooling",
+      "vulnerable to SQL injection",
+      "no timeout handling"
+    ],
+    "expected_fix": "Use parameterized queries, add pooling and timeouts",
+    "difficulty": 3
+  }
+]

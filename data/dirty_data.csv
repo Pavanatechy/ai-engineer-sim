@@ -1,0 +1,11 @@
+name,age,email,phone,join_date,salary
+John Doe,35,john@example.com,555-1234,2020-01-15,75000
+Jane Smith,28,jane.smith@example.com,555-5678,2021-06-20,82000
+Bob Johnson,42,bobjohnson@example,555-9012,2019-03-10,95000
+Alice Williams,,alice@example.com,555-3456,2022-01-01,70000
+Charlie Brown,31,charlie.brown@example.com,INVALID,2020-11-22,78000
+David Clark,29,david@,555-7890,2021-09-15,76000
+Eve Taylor,26,eve@example.com,555-2345,future-date,80000
+Frank Miller,65,frank.miller@example.com,555-6789,2015-05-10,120000
+Grace Lee,,grace@example.com,555-4567,,85000
+Henry Davis,27,henry@example.com,555-8901,2022-03-20,-5000

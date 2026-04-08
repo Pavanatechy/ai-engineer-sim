@@ -23,6 +23,7 @@ COPY tasks/ ./tasks/
 COPY tests/ ./tests/
 COPY scripts/ ./scripts/
 COPY data/ ./data/
+COPY inference.py ./
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
@@ -32,5 +33,8 @@ ENV OPENAI_API_KEY=${OPENAI_API_KEY}
 # Run tests on build (optional)
 RUN pytest tests/ -v --tb=short || true
 
-# Default command: show available tasks
-CMD ["python", "-c", "from env.registry import TaskRegistry; print('\n'.join(TaskRegistry.all_tasks()))"]
+# Expose the app port
+EXPOSE 8080
+
+# Default command: start the OpenEnv inference server
+CMD ["uvicorn", "inference:app", "--host", "0.0.0.0", "--port", "8080"]

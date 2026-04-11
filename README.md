@@ -112,6 +112,47 @@ python scripts/baseline.py \
     --output results.json
 ```
 
+### HTTP Client (Production Deployment)
+
+For production deployments, use the HTTP client to connect to a containerized server:
+
+```python
+from client import AIEngineerEnv
+from env.base import Action
+
+# Connect to server
+env = AIEngineerEnv(base_url="http://localhost:8000", task_id="email_triage")
+
+# Reset and interact
+result = env.reset()
+print(f"Task: {result.observation.task_id}")
+print(f"Available actions: {result.observation.available_actions}")
+
+# Take actions
+action = Action(
+    action_type="classify_email",
+    payload={"category": "urgent"},
+    reasoning="Server alert indicates urgent priority"
+)
+result = env.step(action)
+print(f"Reward: {result.reward.value}")
+
+# Get episode state
+state = env.state()
+print(f"Total reward: {state.cumulative_reward}")
+```
+
+**Starting the Server**:
+
+```bash
+# Start inference server
+uvicorn inference:app --host 0.0.0.0 --port 8000
+
+# Or with Docker
+docker build -t ai-engineer-sim .
+docker run -p 8000:8000 ai-engineer-sim
+```
+
 ---
 
 ## Task Specifications
